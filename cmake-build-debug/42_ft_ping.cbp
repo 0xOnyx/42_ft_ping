@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="42_ft_ping"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/tmp/tmp.wL7VeaWM4f/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="42_ft_ping">
+				<Option output="/tmp/tmp.wL7VeaWM4f/cmake-build-debug/42_ft_ping" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.wL7VeaWM4f/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/tmp/tmp.wL7VeaWM4f/inc"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 42_ft_ping"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="42_ft_ping/fast">
+				<Option output="/tmp/tmp.wL7VeaWM4f/cmake-build-debug/42_ft_ping" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.wL7VeaWM4f/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/tmp/tmp.wL7VeaWM4f/inc"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 42_ft_ping/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/tmp/tmp.wL7VeaWM4f/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/tmp/tmp.wL7VeaWM4f/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/tmp/tmp.wL7VeaWM4f/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/inc/ft_ping.h">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/src/ft_ping.c">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/src/ft_ping.h">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/src/proc_v4.c">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/src/proc_v6.c">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/src/readloop.c">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/src/send_v4.c">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/src/send_v6.c">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/src/utils.c">
+			<Option target="42_ft_ping"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.wL7VeaWM4f/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
