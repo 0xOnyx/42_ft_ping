@@ -60,5 +60,6 @@ void	readloop(void)
 		}
 		gettimeofday(&tval, NULL);
 		(*pr.fproc)(n, &msg, &tval);
+		nrecv++;
 	}
 }

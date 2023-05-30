@@ -17,6 +17,8 @@ struct addrinfo	*Host_serv(const char *host, const char *serv, int family, int s
 			   (serv == NULL) ? "(no service name)": serv,
 			   gai_strerror(n));
 		exit(EXIT_FAILURE);
+
+
 	}
 	return (res);
 }

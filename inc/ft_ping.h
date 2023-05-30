@@ -25,6 +25,7 @@
 # define HEADER_ICMP 	8
 # define BUFF_SIZE 		1024
 
+char 	send_buff[BUFF_SIZE];
 int 	data_len;
 char	*host;
 pid_t 	pid;
@@ -44,6 +45,7 @@ struct	proto {
 	struct	sockaddr	*sasend;
 	struct	sockaddr	*sarecv;
 	socklen_t 			salen;
+	char 				*canonname;
 	int					icmp_proto;
 } pr;
 

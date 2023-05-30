@@ -64,7 +64,7 @@ int	main(int argc, char **argv)
 	ip_value = Sock_ntop_host(ai->ai_addr);
 	signal(SIGALRM, &sig_alarm);
 	printf("PING %s (%s): %d data bytes\n",
-		   ai->ai_canonname ? ai->ai_canonname : ip_value, ip_value, data_len);
+		   host, ip_value, data_len);
 	if (ai->ai_family == AF_INET)
 	{
 		pr.fproc = &proc_v4;
@@ -92,6 +92,7 @@ int	main(int argc, char **argv)
 	pr.sasend = ai->ai_addr;
 	pr.sarecv = calloc(0, ai->ai_addrlen);
 	pr.salen = ai->ai_addrlen;
+	pr.canonname = ai->ai_canonname;
 	readloop();
 	freeaddrinfo(ai);
 	close(sockfd);
