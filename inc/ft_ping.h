@@ -25,7 +25,7 @@
 # define HEADER_ICMP 	8
 # define BUFF_SIZE 		1024
 
-char 	send_buff[BUFF_SIZE];
+unsigned char 	send_buff[BUFF_SIZE];
 int 	data_len;
 char	*host;
 pid_t 	pid;
@@ -49,10 +49,10 @@ struct	proto {
 	int					icmp_proto;
 } pr;
 
-void	send_v4();
+void	send_v4(void);
 void	proc_v4(ssize_t n, struct msghdr *msg, struct timeval *tval);
 
-void	send_v6();
+void	send_v6(void);
 void 	proc_v6(ssize_t n, struct msghdr *msg, struct timeval *tval);
 
 void 	readloop(void);

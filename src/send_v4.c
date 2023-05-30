@@ -1,8 +1,8 @@
 #include "ft_ping.h"
 
-void	send_v4()
+void	send_v4(void)
 {
-	int 			len;
+	ssize_t 		len;
 	struct icmp		*icmp;
 	unsigned char	*data;
 
@@ -12,8 +12,9 @@ void	send_v4()
 	icmp->icmp_hun.ih_idseq.icd_seq = nsent++;
 	icmp->icmp_hun.ih_idseq.icd_id = pid;
 	data = send_buff + HEADER_ICMP;
-	memset(send_buff + HEADER_ICMP, 0, data_len);
+	memset(data, 0, data_len);
+	gettimeofday((struct timeval *)data, 0);
 	len = HEADER_ICMP + data_len;
-	icmp->icmp_cksum = ;//todo implement checksum ;
+	icmp->icmp_cksum = in_checksum(icmp, len);
 	sendto(sockfd, send_buff, len, 0, pr.sasend, pr.salen);
 }
