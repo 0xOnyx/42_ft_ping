@@ -8,7 +8,9 @@
 # include <errno.h>
 # include <signal.h>
 # include <ctype.h>
+# include <sys/time.h>
 
+//IPV4
 # include <netdb.h>
 # include <arpa/inet.h>
 # include <sys/socket.h>
@@ -32,12 +34,13 @@ int		sockfd;
 int 	verbose;
 
 void 			sig_alarm(int signal);
-struct addrinfo	*Host_serv(const char *host, const char *serv, int family, int socktype);
 const char 		*Sock_ntop_host(const struct sockaddr *sa);
+void 			tv_sub(struct timeval *out, struct timeval *in);
+struct addrinfo	*Host_serv(const char *host, const char *serv, int family, int socktype);
 
 struct	proto {
-	void 	(*fproc)();
 	void 	(*fsend)();
+	void 	(*fproc)(ssize_t, struct msghdr *, struct timeval *);
 	struct	sockaddr	*sasend;
 	struct	sockaddr	*sarecv;
 	socklen_t 			salen;
@@ -45,10 +48,10 @@ struct	proto {
 } pr;
 
 void	send_v4();
-void	proc_v4();
+void	proc_v4(ssize_t n, struct msghdr *msg, struct timeval *tval);
 
 void	send_v6();
-void 	proc_v6();
+void 	proc_v6(ssize_t n, struct msghdr *msg, struct timeval *tval);
 
 void 	readloop(void);
 

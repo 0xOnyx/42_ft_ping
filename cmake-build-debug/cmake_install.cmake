@@ -1,4 +1,4 @@
-# Install script for directory: /tmp/tmp.wL7VeaWM4f
+# Install script for directory: /home/onyx/CLionProjects/42_ft_ping
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/tmp/tmp.wL7VeaWM4f/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/onyx/CLionProjects/42_ft_ping/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

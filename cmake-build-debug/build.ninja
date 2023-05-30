@@ -49,11 +49,66 @@ cmake_ninja_workdir = /home/onyx/CLionProjects/42_ft_ping/cmake-build-debug/
 
 build cmake_object_order_depends_target_42_ft_ping: phony || CMakeFiles/42_ft_ping.dir
 
-build CMakeFiles/42_ft_ping.dir/main.c.o: C_COMPILER__42_ft_ping_Debug /home/onyx/CLionProjects/42_ft_ping/main.c || cmake_object_order_depends_target_42_ft_ping
-  DEP_FILE = CMakeFiles/42_ft_ping.dir/main.c.o.d
+build CMakeFiles/42_ft_ping.dir/src/ft_ping.c.o: C_COMPILER__42_ft_ping_Debug /home/onyx/CLionProjects/42_ft_ping/src/ft_ping.c || cmake_object_order_depends_target_42_ft_ping
+  DEP_FILE = CMakeFiles/42_ft_ping.dir/src/ft_ping.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  INCLUDES = -I/home/onyx/CLionProjects/42_ft_ping/inc
   OBJECT_DIR = CMakeFiles/42_ft_ping.dir
-  OBJECT_FILE_DIR = CMakeFiles/42_ft_ping.dir
+  OBJECT_FILE_DIR = CMakeFiles/42_ft_ping.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/42_ft_ping.dir/
+  TARGET_PDB = 42_ft_ping.pdb
+
+build CMakeFiles/42_ft_ping.dir/src/proc_v4.c.o: C_COMPILER__42_ft_ping_Debug /home/onyx/CLionProjects/42_ft_ping/src/proc_v4.c || cmake_object_order_depends_target_42_ft_ping
+  DEP_FILE = CMakeFiles/42_ft_ping.dir/src/proc_v4.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  INCLUDES = -I/home/onyx/CLionProjects/42_ft_ping/inc
+  OBJECT_DIR = CMakeFiles/42_ft_ping.dir
+  OBJECT_FILE_DIR = CMakeFiles/42_ft_ping.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/42_ft_ping.dir/
+  TARGET_PDB = 42_ft_ping.pdb
+
+build CMakeFiles/42_ft_ping.dir/src/send_v4.c.o: C_COMPILER__42_ft_ping_Debug /home/onyx/CLionProjects/42_ft_ping/src/send_v4.c || cmake_object_order_depends_target_42_ft_ping
+  DEP_FILE = CMakeFiles/42_ft_ping.dir/src/send_v4.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  INCLUDES = -I/home/onyx/CLionProjects/42_ft_ping/inc
+  OBJECT_DIR = CMakeFiles/42_ft_ping.dir
+  OBJECT_FILE_DIR = CMakeFiles/42_ft_ping.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/42_ft_ping.dir/
+  TARGET_PDB = 42_ft_ping.pdb
+
+build CMakeFiles/42_ft_ping.dir/src/send_v6.c.o: C_COMPILER__42_ft_ping_Debug /home/onyx/CLionProjects/42_ft_ping/src/send_v6.c || cmake_object_order_depends_target_42_ft_ping
+  DEP_FILE = CMakeFiles/42_ft_ping.dir/src/send_v6.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  INCLUDES = -I/home/onyx/CLionProjects/42_ft_ping/inc
+  OBJECT_DIR = CMakeFiles/42_ft_ping.dir
+  OBJECT_FILE_DIR = CMakeFiles/42_ft_ping.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/42_ft_ping.dir/
+  TARGET_PDB = 42_ft_ping.pdb
+
+build CMakeFiles/42_ft_ping.dir/src/proc_v6.c.o: C_COMPILER__42_ft_ping_Debug /home/onyx/CLionProjects/42_ft_ping/src/proc_v6.c || cmake_object_order_depends_target_42_ft_ping
+  DEP_FILE = CMakeFiles/42_ft_ping.dir/src/proc_v6.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  INCLUDES = -I/home/onyx/CLionProjects/42_ft_ping/inc
+  OBJECT_DIR = CMakeFiles/42_ft_ping.dir
+  OBJECT_FILE_DIR = CMakeFiles/42_ft_ping.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/42_ft_ping.dir/
+  TARGET_PDB = 42_ft_ping.pdb
+
+build CMakeFiles/42_ft_ping.dir/src/utils.c.o: C_COMPILER__42_ft_ping_Debug /home/onyx/CLionProjects/42_ft_ping/src/utils.c || cmake_object_order_depends_target_42_ft_ping
+  DEP_FILE = CMakeFiles/42_ft_ping.dir/src/utils.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  INCLUDES = -I/home/onyx/CLionProjects/42_ft_ping/inc
+  OBJECT_DIR = CMakeFiles/42_ft_ping.dir
+  OBJECT_FILE_DIR = CMakeFiles/42_ft_ping.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/42_ft_ping.dir/
+  TARGET_PDB = 42_ft_ping.pdb
+
+build CMakeFiles/42_ft_ping.dir/src/readloop.c.o: C_COMPILER__42_ft_ping_Debug /home/onyx/CLionProjects/42_ft_ping/src/readloop.c || cmake_object_order_depends_target_42_ft_ping
+  DEP_FILE = CMakeFiles/42_ft_ping.dir/src/readloop.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  INCLUDES = -I/home/onyx/CLionProjects/42_ft_ping/inc
+  OBJECT_DIR = CMakeFiles/42_ft_ping.dir
+  OBJECT_FILE_DIR = CMakeFiles/42_ft_ping.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/42_ft_ping.dir/
   TARGET_PDB = 42_ft_ping.pdb
 
@@ -65,7 +120,7 @@ build CMakeFiles/42_ft_ping.dir/main.c.o: C_COMPILER__42_ft_ping_Debug /home/ony
 #############################################
 # Link the executable 42_ft_ping
 
-build 42_ft_ping: C_EXECUTABLE_LINKER__42_ft_ping_Debug CMakeFiles/42_ft_ping.dir/main.c.o
+build 42_ft_ping: C_EXECUTABLE_LINKER__42_ft_ping_Debug CMakeFiles/42_ft_ping.dir/src/ft_ping.c.o CMakeFiles/42_ft_ping.dir/src/proc_v4.c.o CMakeFiles/42_ft_ping.dir/src/send_v4.c.o CMakeFiles/42_ft_ping.dir/src/send_v6.c.o CMakeFiles/42_ft_ping.dir/src/proc_v6.c.o CMakeFiles/42_ft_ping.dir/src/utils.c.o CMakeFiles/42_ft_ping.dir/src/readloop.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/42_ft_ping.dir
   POST_BUILD = :

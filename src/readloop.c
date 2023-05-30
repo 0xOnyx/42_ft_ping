@@ -20,7 +20,13 @@ int	create_ping_4(struct addrinfo *addr)
 
 void	readloop(void)
 {
-	int size;
+	int 			size;
+	struct msghdr	msg;
+	struct iovec	iov;
+	struct timeval	tval;
+	ssize_t			n;
+	char 			recv_buff[BUFF_SIZE];
+	char 			control_buff[BUFF_SIZE];
 
 	size = 60 * 1024;
 	if ((sockfd = socket(pr.sasend->sa_family, SOCK_RAW, pr.icmp_proto)) == -1
@@ -32,5 +38,27 @@ void	readloop(void)
 	setuid(getuid()); //delete all permission and go to real user ID of calling process
 	sig_alarm(SIGALRM);
 
-	recvfrom();
+	iov.iov_base = recv_buff;
+	iov.iov_len = sizeof(recv_buff);
+
+	msg.msg_control = control_buff;
+	msg.msg_flags = 0;
+	msg.msg_iov = &iov;
+	msg.msg_iovlen = 1;
+	msg.msg_name = pr.sarecv;
+	while(42)
+	{
+		msg.msg_namelen = pr.salen;
+		msg.msg_controllen = sizeof(control_buff);
+		n = recvmsg(sockfd, &msg, 0);
+		if (n < 0)
+		{
+			if (errno == EINTR) //for prevent alarm signal
+				continue ;
+			else
+				dprintf(2, "recvmsg error\n");
+		}
+		gettimeofday(&tval, NULL);
+		(*pr.fproc)(n, &msg, &tval);
+	}
 }

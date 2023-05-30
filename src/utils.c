@@ -50,3 +50,13 @@ void	sig_alarm(int signal)
 	pr.fsend();
 	alarm(1);
 }
+
+void 	tv_sub(struct timeval *out, struct timeval *in)
+{
+	if ((out->tv_usec -= in->tv_usec) < 0)
+	{
+		--out->tv_sec;
+		out->tv_sec += 1000000;
+	}
+	out->tv_sec -= in->tv_sec;
+}

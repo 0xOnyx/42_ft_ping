@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/42_ft_ping.dir/src/ft_ping.c.o CMakeFiles/42_ft_ping.dir/src/proc_v4.c.o CMakeFiles/42_ft_ping.dir/src/send_v4.c.o CMakeFiles/42_ft_ping.dir/src/send_v6.c.o CMakeFiles/42_ft_ping.dir/src/proc_v6.c.o CMakeFiles/42_ft_ping.dir/src/utils.c.o CMakeFiles/42_ft_ping.dir/src/readloop.c.o -o 42_ft_ping 
