@@ -29,7 +29,7 @@ void	proc_v4(ssize_t n, struct msghdr *msg, struct timeval *tvrecv)
 		tv_sub(tvrecv, rvsend);
 		rtt = (double)tvrecv->tv_sec * 1000.0 + (double)tvrecv->tv_usec / 1000.0; //to ms;
 		printf("%d bytes from %s (%s): icmp_seq=%d ttl=%d time=%lf ms\n",
-			   icmplen, Sock_ntop_host(pr.sarecv), pr.canonname ? pr.canonname : host,
+			   icmplen, pr.canonname ? pr.canonname : host, Sock_ntop_host(pr.sarecv),
 			   icmp->icmp_hun.ih_idseq.icd_seq, ip->ip_ttl, rtt);
 	}
 	else if (verbose)

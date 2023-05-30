@@ -19,7 +19,6 @@ void	readloop(void)
 	}
 	setuid(getuid()); //delete all permission and go to real user ID of calling process
 	sig_alarm(SIGALRM);
-
 	iov.iov_base = recv_buff;
 	iov.iov_len = sizeof(recv_buff);
 

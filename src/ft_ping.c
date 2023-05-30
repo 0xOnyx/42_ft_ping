@@ -1,5 +1,15 @@
 #include "ft_ping.h"
 
+unsigned char 	send_buff[BUFF_SIZE];
+int 			data_len;
+char			*host;
+pid_t 			pid;
+int 			nsent;
+int 			nrecv;
+int				sockfd;
+int 			verbose;
+struct proto 	pr;
+
 static int get_nbr(char *str)
 {
 	long 	val;
@@ -9,7 +19,7 @@ static int get_nbr(char *str)
 	val = strtol(str, &end_ptr, 10);
 	if (errno != 0)
 	{
-		perror("-s error:");
+		perror("-s errqor:");
 		exit(EXIT_FAILURE);
 	}
 	if (end_ptr == str || *end_ptr != '\0')
@@ -28,7 +38,6 @@ static void	set_arg(int argc, char **argv)
 	verbose = 0;
 	nsent = 0;
 	nrecv = 0;
-	host = argv[1];
 	pid = getpid() & 0xFFFF;
 	opterr = 0;
 	while((c = getopt(argc, argv, "vs:")) != -1)
@@ -52,6 +61,7 @@ static void	set_arg(int argc, char **argv)
 		dprintf(1, "Usage: ping [ -vs ] <hostname>\n");
 		exit(EXIT_FAILURE);
 	}
+	host = argv[optind];
 }
 
 int	main(int argc, char **argv)
@@ -60,7 +70,9 @@ int	main(int argc, char **argv)
 	const char			*ip_value;
 
 	set_arg(argc, argv);
-	ai = Host_serv(host, NULL, 0, SOCK_RAW);
+
+//	ai = Host_serv(host, NULL, 0, SOCK_RAW);  IPV6 TODO UNCOMMENT THIS
+	ai = Host_serv(host, NULL, AF_INET, SOCK_RAW);  //FOR CE IPV4 commente this is only for dev
 	ip_value = Sock_ntop_host(ai->ai_addr);
 	signal(SIGALRM, &sig_alarm);
 	printf("PING %s (%s): %d data bytes\n",

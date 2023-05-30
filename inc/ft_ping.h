@@ -27,14 +27,15 @@
 # define HEADER_ICMP 	8
 # define BUFF_SIZE 		1024
 
-unsigned char 	send_buff[BUFF_SIZE];
-int 	data_len;
-char	*host;
-pid_t 	pid;
-int 	nsent;
-int 	nrecv;
-int		sockfd;
-int 	verbose;
+extern unsigned char 	send_buff[BUFF_SIZE];
+extern int 				data_len;
+extern char				*host;
+extern pid_t 			pid;
+extern int 				nsent;
+extern int 				nrecv;
+extern int				sockfd;
+extern int 				verbose;
+extern struct proto		pr;
 
 void 			sig_alarm(int signal);
 const char 		*Sock_ntop_host(const struct sockaddr *sa);
@@ -50,7 +51,7 @@ struct	proto {
 	socklen_t 			salen;
 	char 				*canonname;
 	int					icmp_proto;
-} pr;
+};
 
 void	send_v4(void);
 void	proc_v4(ssize_t n, struct msghdr *msg, struct timeval *tval);
