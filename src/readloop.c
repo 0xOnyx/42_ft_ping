@@ -1,23 +1,5 @@
 #include "ft_ping.h"
 
-
-int	create_ping_4(struct addrinfo *addr)
-{
-	int 	sockfd;
-
-	if ((sockfd = socket(addr->ai_family, addr->ai_socktype, addr->ai_protocol)) != 0
-		|| setsockopt(sockfd, IPPROTO_IP, IP))
-	{
-		printf("[error]\t%s\n", strerror(errno));
-		return (1);
-	}
-	sig_alarm(SIGALRM);
-	readloop();
-	close(sockfd);
-	return (0);
-}
-
-
 void	readloop(void)
 {
 	int 			size;

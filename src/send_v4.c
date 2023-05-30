@@ -2,7 +2,7 @@
 
 void	send_v4(void)
 {
-	ssize_t 		len;
+	int		 		len;
 	struct icmp		*icmp;
 	unsigned char	*data;
 
@@ -15,6 +15,6 @@ void	send_v4(void)
 	memset(data, 0, data_len);
 	gettimeofday((struct timeval *)data, 0);
 	len = HEADER_ICMP + data_len;
-	icmp->icmp_cksum = in_checksum(icmp, len);
+	icmp->icmp_cksum = checksum((void *)icmp, (int)len);
 	sendto(sockfd, send_buff, len, 0, pr.sasend, pr.salen);
 }

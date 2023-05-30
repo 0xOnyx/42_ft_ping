@@ -9,6 +9,8 @@
 # include <signal.h>
 # include <ctype.h>
 # include <sys/time.h>
+# include <aio.h>
+# include <stddef.h>
 
 //IPV4
 # include <netdb.h>
@@ -38,6 +40,7 @@ void 			sig_alarm(int signal);
 const char 		*Sock_ntop_host(const struct sockaddr *sa);
 void 			tv_sub(struct timeval *out, struct timeval *in);
 struct addrinfo	*Host_serv(const char *host, const char *serv, int family, int socktype);
+uint16_t 		checksum(void *, int len);
 
 struct	proto {
 	void 	(*fsend)();

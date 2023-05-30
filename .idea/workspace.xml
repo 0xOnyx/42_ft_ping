@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c182f10d-c3af-4700-9634-9fc659a8a057" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/42_ft_ping.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/ft_ping.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ping.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proc_v6.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/proc_v6.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/readloop.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/readloop.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/send_v4.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/send_v4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/send_v6.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/send_v6.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/inc/ft_ping.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ft_ping.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/proc_v4.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/proc_v6.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/readloop.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/send_v4.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/send_v6.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/utils.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Caches/JetBrains/CLion2022.1/.remote/195.15.213.43_22/b0272e1d-babb-4991-b514-72872dfdb88a/usr/include/netdb.h" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/Library/Caches/JetBrains/CLion2022.1/.remote/195.15.213.43_22/b0272e1d-babb-4991-b514-72872dfdb88a/usr/include/netinet/ip.h" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/Library/Caches/JetBrains/CLion2022.1/.remote/195.15.213.43_22/b0272e1d-babb-4991-b514-72872dfdb88a/usr/include/netinet/ip_icmp.h" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/Library/Caches/JetBrains/CLion2022.1/.remote/195.15.213.43_22/b0272e1d-babb-4991-b514-72872dfdb88a/usr/include/string.h" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/Library/Caches/JetBrains/CLion2022.1/.remote/195.15.213.43_22/b0272e1d-babb-4991-b514-72872dfdb88a/usr/include/x86_64-linux-gnu/bits/socket.h" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QT5HYrjzqVN59DSai3cuBek4Lp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/Users/jerdos-s/CLionProjects/42_ft_ping",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CPPToolchains",
+    "structure.view.defaults.are.configured": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/inc" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ft_ping" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="true" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ft_ping" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="ft_ping">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c182f10d-c3af-4700-9634-9fc659a8a057" name="Changes" comment="" />
+      <created>1685364645107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685364645107</updated>
+      <workItem from="1685364648220" duration="16665000" />
+      <workItem from="1685435252824" duration="2789000" />
+      <workItem from="1685445192756" duration="684000" />
+      <workItem from="1685447153661" duration="7419000" />
+      <workItem from="1685474058396" duration="3005000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

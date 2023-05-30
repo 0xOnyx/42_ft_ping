@@ -8,6 +8,8 @@
 #include <arpa/inet.h>
 #include <errno.h>
 
+#define PCKT_SIZE 64
+
 unsigned short checksum(void *b, int len)
 {
 	unsigned short	*addr = (unsigned short *)b;
@@ -23,8 +25,6 @@ unsigned short checksum(void *b, int len)
 		sum = (sum & 0xffff) + (sum >> 16);
 	return (~sum);
 }
-
-#define PCKT_SIZE 64
 
 typedef struct s_pckt {
 	struct icmphdr			header;

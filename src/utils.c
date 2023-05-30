@@ -62,3 +62,20 @@ void 	tv_sub(struct timeval *out, struct timeval *in)
 	}
 	out->tv_sec -= in->tv_sec;
 }
+
+uint16_t	checksum(void *b, int len)
+{
+	uint16_t			*addr	= (uint16_t *)b;
+	register uint16_t	sum		= 0;
+
+	while ( len > 1)
+	{
+		sum += *addr++;
+		len -= 2;
+	}
+	if (len > 0)
+		sum += *addr;
+	while (sum >> 16)
+		sum = (sum & 0xffff) + (sum >> 16);
+	return (~sum);
+}
