@@ -4,30 +4,32 @@ unsigned char 	send_buff[BUFF_SIZE];
 int 			data_len;
 char			*host;
 pid_t 			pid;
-int 			nsent;
-int 			nrecv;
+long int		nsent;
+long int		nsent_max = -1;
+long int		nrecv;
 int				sockfd;
 int 			verbose;
+int 			flood = 0;
+double 			interval = 1.0f;
+int				ttl = -1;
+volatile int	is_running = 1;
 struct proto 	pr;
+struct timeval	start_time;
 
-static int get_nbr(char *str)
+void	sig_alarm(int signal)
 {
-	long 	val;
-	char	*end_ptr;
+	(void)signal;
 
-	errno = 0;
-	val = strtol(str, &end_ptr, 10);
-	if (errno != 0)
-	{
-		perror("-s errqor:");
-		exit(EXIT_FAILURE);
-	}
-	if (end_ptr == str || *end_ptr != '\0')
-	{
-		dprintf(2, "-s require number value\n");
-		exit(EXIT_FAILURE);
-	}
-	return ((int)val);
+	if (nsent >= nsent_max && nsent_max != -1)
+		is_running = 0;
+	else
+		pr.fsend();
+}
+
+void sig_quit(int signal)
+{
+	(void)signal;
+	is_running = 0;
 }
 
 static void	set_arg(int argc, char **argv)
@@ -38,17 +40,55 @@ static void	set_arg(int argc, char **argv)
 	verbose = 0;
 	nsent = 0;
 	nrecv = 0;
-	pid = getpid() & 0xFFFF;
 	opterr = 0;
-	while((c = getopt(argc, argv, "vs:")) != -1)
+	pid = getpid() & 0xFFFF;
+	while((c = getopt(argc, argv, "Vvfs:t:i:c:")) != -1)
 	{
 		if (c == 'v')
 			verbose++;
+		else if (c == 'f')
+		{
+			flood++;
+			interval = 0.01;
+		}
+		else if (c == 'c')
+		{
+			nsent_max = get_int_nbr(optarg);
+			if (nsent_max <= 0 || nsent_max >= 9223372036854775807)
+			{
+				dprintf(2, "ft_ping: invalid argument: '%ld': out of range: 0 <= value <= 9223372036854775807\n", nsent_max);
+				exit(EXIT_SUCCESS);
+			}
+		}
+		else if (c == 'i')
+		{
+			interval = get_double_nbr(optarg);
+			printf("interval => %lf %s\n", interval, optarg);
+			if (interval < 0.001)
+			{
+				dprintf(2, "ft_ping: invalid argument: '%f': out of range: 0 <= value\n", interval);
+				exit(EXIT_SUCCESS);
+			}
+		}
+		else if (c == 't')
+		{
+			ttl = get_int_nbr(optarg);
+			if (ttl <= 0 || ttl >= 255)
+			{
+				dprintf(2, "ft_ping: invalid argument: '%d': out of range: 0 <= value <= 255\n", ttl);
+				exit(EXIT_SUCCESS);
+			}
+		}
 		else if(c == 's')
-			data_len = get_nbr(optarg);
+			data_len = get_int_nbr(optarg);
+		else if (c == 'V')
+		{
+			printf("ft_ping from 42 jerdos-s\n");
+			exit(EXIT_SUCCESS);
+		}
 		else if (c == '?')
 		{
-			if (optopt == 's')
+			if (optopt == 's' || optopt == 't' || optopt == 'i' || optopt == 'c')
 				dprintf(2, "Option -%c requires an argument\n", optopt);
 			else if (isprint(optopt))
 				dprintf(2, "Unknown option `-%c`\n", optopt);
@@ -58,7 +98,7 @@ static void	set_arg(int argc, char **argv)
 	}
 	if (optind != argc - 1)
 	{
-		dprintf(1, "Usage: ping [ -vs ] <hostname>\n");
+		dprintf(1, "Usage: ping [ -Vvfstic ] <hostname>\n");
 		exit(EXIT_FAILURE);
 	}
 	host = argv[optind];
@@ -66,23 +106,23 @@ static void	set_arg(int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
-	struct addrinfo		*ai;
-	const char			*ip_value;
+    struct sockaddr_storage	sarecv;
+	struct addrinfo			*ai;
+	const char				*ip_value;
 
 	set_arg(argc, argv);
 
-//	ai = Host_serv(host, NULL, 0, SOCK_RAW);  IPV6 TODO UNCOMMENT THIS
-	ai = Host_serv(host, NULL, AF_INET, SOCK_RAW);  //FOR CE IPV4 commente this is only for dev
+	ai = Host_serv(host, NULL, 0, SOCK_RAW); /// IPV6
 	ip_value = Sock_ntop_host(ai->ai_addr);
 	signal(SIGALRM, &sig_alarm);
-	printf("PING %s (%s): %d data bytes\n",
-		   host, ip_value, data_len);
+	signal(SIGINT, &sig_quit);
+	printf("PING %s (%s) %d(%d) bytes of data.\n",
+		   host, ip_value, data_len, data_len + HEADER_ICMP + (ai->ai_family == AF_INET ? 20 : 40));
 	if (ai->ai_family == AF_INET)
 	{
 		pr.fproc = &proc_v4;
 		pr.fsend = &send_v4;
 		pr.icmp_proto = IPPROTO_ICMP;
-
 	}
 	else if (ai->ai_family == AF_INET6)
 	{
@@ -102,11 +142,17 @@ int	main(int argc, char **argv)
 		return (EXIT_FAILURE);
 	}
 	pr.sasend = ai->ai_addr;
-	pr.sarecv = calloc(0, ai->ai_addrlen);
+	pr.sarecv = (struct sockaddr *)&sarecv;
 	pr.salen = ai->ai_addrlen;
-	pr.canonname = ai->ai_canonname;
+	pr.canonname = reverse_dns_lookup(pr.sasend, pr.salen);
+	if (pr.canonname)
+		pr.canonname = strdup(pr.canonname);
+	gettimeofday(&start_time, 0);
 	readloop();
+	print_state(&start_time);
 	freeaddrinfo(ai);
+	if (pr.canonname)
+		free((void *)pr.canonname);
 	close(sockfd);
 	return (EXIT_SUCCESS);
 }

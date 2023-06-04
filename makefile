@@ -24,14 +24,15 @@ OBJ					= $(SRCS:.c=.o)
 OBJS				= $(addprefix $(PATH_OBJ),$(OBJ))
 HEADERS				= $(addprefix $(PATH_HEADER),$(HEADER))
 
-DEBUGING			= -g3 -fsanitize=address -fsanitize=undefined
-CFLAGS				= #-Wall -Wextra -Werror
+DEBUGING			= -g3 #-fsanitize=address -fsanitize=undefined
+CFLAGS				= -Wall -Wextra -Werror -Wpedantic
 
 OPTIONS				= -I$(PATH_HEADER)
+LIB					= -lm
 CC					= gcc
 RM					= rm -rf
 
-DEBUG = 0
+DEBUG = 1
 
 ifeq ($(DEBUG), 1)
 	CFLAGS += $(DEBUGING)
@@ -48,7 +49,7 @@ $(PATH_OBJ)$(PATH_SRC)%.o	: $(PATH_SRC)%.c $(HEADERS)
 
 
 $(NAME)		: $(OBJS)
-	@$(CC) $(CFLAGS) $(OPTIONS) -o $(@) $(OBJS)
+	@$(CC) $(CFLAGS) $(OPTIONS) -o $(@) $(OBJS) $(LIB)
 	@echo "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] LINKAGE $(COLOR_BOLD)ALL OBJS FILE =>\n\t $(COLOR_WHITE)$(OBJS:.o=.o\n\t)"
 	@echo "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION FINISH !$(COLOR_WHITE)$(COLOR_RESET_BOLD)"
 

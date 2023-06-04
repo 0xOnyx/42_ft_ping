@@ -3,6 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -20,13 +23,32 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c182f10d-c3af-4700-9634-9fc659a8a057" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
+    <list default="true" id="cd325187-1f44-4d2c-bdd0-773f8e425e62" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_ping" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/ft_ping.h" beforeDir="false" afterPath="$PROJECT_DIR$/inc/ft_ping.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src/ft_ping.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src/ft_ping.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src/proc_v4.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src/proc_v4.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src/proc_v6.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src/proc_v6.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src/readloop.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src/readloop.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src/send_v4.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src/send_v4.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src/send_v6.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src/send_v6.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src/utils.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src/utils.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ft_ping.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/ft_ping.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/proc_v4.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/proc_v4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proc_v6.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/proc_v6.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/readloop.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/readloop.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/send_v4.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/send_v4.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/send_v6.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/send_v6.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +58,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -91,6 +114,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2022" />
@@ -100,20 +126,27 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/jerdos-s/CLionProjects/42_ft_ping",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "MakefileSettings",
-    "structure.view.defaults.are.configured": "true"
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -123,7 +156,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Makefile Application.all">
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="-v google.com" REDIRECT_INPUT="false" ELEVATE="true" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_ft_ping" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="ft_ping">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="google.com" REDIRECT_INPUT="false" ELEVATE="true" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_ft_ping" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="ft_ping">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -138,7 +171,7 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="re" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_ft_ping" TARGET_NAME="re" CONFIG_NAME="re" version="1">
+    <configuration name="re" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="google.com" REDIRECT_INPUT="false" ELEVATE="true" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_ft_ping" TARGET_NAME="re" CONFIG_NAME="re" version="1" RUN_PATH="ft_ping">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -151,29 +184,50 @@
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
-      <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.ft_ping" />
+      <item itemvalue="Makefile Application.re" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c182f10d-c3af-4700-9634-9fc659a8a057" name="Changes" comment="" />
-      <created>1685364645107</created>
+      <changelist id="cd325187-1f44-4d2c-bdd0-773f8e425e62" name="Changes" comment="" />
+      <created>1682094549988</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1685364645107</updated>
-      <workItem from="1685364648220" duration="16665000" />
-      <workItem from="1685435252824" duration="2789000" />
-      <workItem from="1685445192756" duration="684000" />
-      <workItem from="1685447153661" duration="7419000" />
-      <workItem from="1685474058396" duration="3863000" />
-      <workItem from="1685478033289" duration="1504000" />
+      <updated>1682094549988</updated>
+      <workItem from="1682094551058" duration="7237000" />
+      <workItem from="1682265887466" duration="13770000" />
+      <workItem from="1682529253900" duration="3543000" />
+      <workItem from="1685132316209" duration="14906000" />
+      <workItem from="1685480578133" duration="38000" />
+      <workItem from="1685480625610" duration="61075000" />
+      <workItem from="1685817353101" duration="317000" />
+      <workItem from="1685817681416" duration="136000" />
+      <workItem from="1685817918702" duration="1406000" />
+      <workItem from="1685828241471" duration="14265000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -185,5 +239,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
